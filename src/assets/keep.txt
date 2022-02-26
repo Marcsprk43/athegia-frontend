@@ -1,0 +1,13 @@
+    this.dataService.getConfig()
+    .subscribe((data: any) => 
+    this.deviceData = {
+      deviceId: data[0].device_id,
+      deviceName: data[0].device_name,
+      status: data[0].status,
+      state: data[0].state,
+      finalized: data[0].finalized,
+      connected: data[0].connected,
+      dataOne: data[0].data.spo2,
+      dataTwo: data[0].data.pulse,
+      goodReadings: data[0].data.good_readings})
+  }}

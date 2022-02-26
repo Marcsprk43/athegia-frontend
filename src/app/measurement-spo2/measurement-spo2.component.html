@@ -1,0 +1,49 @@
+<div fxFlex class="dark-style spo2 disconnected"
+fxLayout="column">
+<mat-card class="spo2-format spo2 disconnected"
+    fxFill
+    fxLayout="column"
+    fxLayoutAlign="space-around stretch">
+    
+    <div class = 'spo2-format spo2 disconnected'
+        fxFlex 
+        fxLayout="column" 
+        fxLayoutAlign="space-around stretch"
+        fxLayoutGap="5px"
+        fxFill>
+        <div fxFlex>
+            <mat-card-title class="dark-style spo2 disconnected">Oxygen Saturation</mat-card-title>
+        </div>
+        <div fxFlex>
+            <div  
+                fxLayout="row"
+                fxLayoutAlign="space-around stretch"
+                fxFlex>
+                <div fxFlex="33" class="metric-name" >SPO2</div>
+                <div fxFlex="33" class="metric-value"*ngIf='deviceData'>{{this.deviceData.dataOne}}</div>
+                <div fxFlex="33" class="metric-unit">%</div>
+          </div>
+        </div>
+
+        <div fxFlex>
+            <div  
+                fxLayout="row"   
+                fxLayoutAlign="space-around stretch"
+                fxFlex>
+            <div fxFlex="33" class="metric-name" >Pulse</div>
+            <div fxFlex="33" class="metric-value"*ngIf='deviceData'>{{this.deviceData.dataTwo}}</div>
+            <div fxFlex="33" class="metric-unit">bpm</div>
+          </div>
+        </div>
+        <div fxFlex="8%">
+            <mat-card-actions>
+                <p class="status-line"*ngIf='deviceData'>{{this.deviceData.status}}</p>
+              </mat-card-actions>
+        </div>
+
+    </div>
+
+
+
+</mat-card>
+</div>

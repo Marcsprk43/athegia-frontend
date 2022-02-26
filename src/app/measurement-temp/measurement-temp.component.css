@@ -1,0 +1,55 @@
+.spo2-format {
+    height:max-content;
+}
+
+.dark-style {
+    color:white;
+}
+
+.temp{}
+
+.metric-name {
+    font-size: 15px;
+    color: white;
+    margin: 2px;
+    text-align: right;
+}
+
+.metric-unit {
+    font-size: 10px;
+    color: white;
+    margin: 2px;
+    text-align: left;
+}
+
+.metric-value {
+    font-size: 50px;
+    color: white;
+    margin: 8px;
+    text-align: right;
+
+}
+
+.status-line {
+    font-size: 10px;
+    color: rgb(87, 86, 86);
+    margin: 2px;
+    text-align: left;
+
+}
+
+.page-heading {
+    color: orange;
+    font-style: bold;
+    font-size: 40;
+    margin:0;
+}
+.disconnected{
+    background-color: black;
+}
+.connected{
+    background-color: rgb(77, 77, 77);
+}
+.finalized{
+    background-color: grey;
+}

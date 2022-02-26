@@ -1,0 +1,49 @@
+<div fxFlex class="dark-style"
+fxLayout="column">
+<mat-card class="blood-format disconnected bp" 
+    fxFill
+    fxLayout="column"
+    fxLayoutAlign="space-around stretch">
+    
+    <div class = 'connection disconnected bp'
+        fxFlex 
+        fxLayout="column" 
+        fxLayoutAlign="space-around stretch"
+        fxLayoutGap="5px" 
+        fxFill>
+        <div fxFlex>
+            <mat-card-title class="dark-style">Blood Pressure</mat-card-title>
+        </div>
+        <div fxFlex>
+            <div  
+                fxLayout="row"
+                fxLayoutAlign="space-around stretch"
+                fxFlex>
+                <div fxFlex="33" class="metric-name" >Diastolic</div>
+                <div fxFlex="33" class="metric-value" *ngIf="deviceData">{{this.deviceData.dataTwo}}</div>
+                <div fxFlex="33" class="metric-unit">mmHg</div>
+          </div>
+        </div>
+
+        <div fxFlex>
+            <div  
+                fxLayout="row"   
+                fxLayoutAlign="space-around stretch"
+                fxFlex>
+            <div fxFlex="33" class="metric-name" >Systolic</div>
+            <div fxFlex="33" class="metric-value"*ngIf="deviceData">{{this.deviceData.dataOne}}</div>
+            <div fxFlex="33" class="metric-unit">mmHg</div>
+          </div>
+        </div>
+        <div fxFlex="8%">
+            <mat-card-actions>
+                <p class="status-line" *ngIf='deviceData'>{{this.deviceData.status}}</p>
+              </mat-card-actions>
+        </div>
+
+    </div>
+
+
+
+</mat-card>
+</div>

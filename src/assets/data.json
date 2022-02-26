@@ -1,0 +1,1 @@
+[{ "device_id": 0, "device_name": "VTM 20F", "status": "Initialized", "state": 0, "message": "", "finalized": false, "connected": false, "data": { "spo2": 0, "pulse": 0, "good_readings": 0, "total_readings": 0 } }, {"thing":5}]
