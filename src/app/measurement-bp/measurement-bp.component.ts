@@ -38,7 +38,7 @@ export class MeasurementBpComponent implements OnInit {
         goodReadings: data[1].data.good_readings};
         console.log(this.deviceData)
       });
-    interval(500).subscribe(() => {
+    interval(2000).subscribe(() => {
       this.dataService.getConfig().subscribe((data:any) => {
       this.deviceData = {
         deviceId: data[1].device_id,
@@ -50,7 +50,8 @@ export class MeasurementBpComponent implements OnInit {
         dataOne: data[1].data.systolic,
         dataTwo: data[1].data.diastolic,
         goodReadings: data[1].data.good_readings};
-        this.colour(this.deviceData.finalized, this.deviceData.connected)
+        this.colour(this.deviceData.finalized, this.deviceData.connected);
+        
       }
     )});
     }

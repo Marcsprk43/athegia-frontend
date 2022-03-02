@@ -13,6 +13,7 @@ export interface device {
   dataTwo: number;
   goodReadings: number;
 }
+
 @Component({
   selector: 'app-measurement-spo2',
   templateUrl: './measurement-spo2.component.html',
@@ -38,7 +39,7 @@ export class MeasurementSpo2Component implements OnInit {
         dataTwo: data[0].data.pulse,
         goodReadings: data[0].data.good_readings};
       });
-    interval(500).subscribe(() => {
+    interval(2000).subscribe(() => {
       this.dataService.getConfig().subscribe((data:any) => {
       this.deviceData = {
         deviceId: data[0].device_id,
@@ -50,12 +51,15 @@ export class MeasurementSpo2Component implements OnInit {
         dataOne: data[0].data.spo2,
         dataTwo: data[0].data.pulse,
         goodReadings: data[0].data.good_readings};
-        this.colour(this.deviceData.finalized, this.deviceData.connected)
+        this.colour(this.deviceData.finalized, this.deviceData.connected);
+
       }
+      
     )});
     }
   colour(finalized: boolean, connected: boolean) {
     const divs = document.querySelectorAll('.spo2');
+    console.log("Finalized", finalized, " Connected", connected)
     for (var i = 0; i < divs.length; i++) {
       if (finalized) {
         if (divs[i]?.classList.contains('connected')){
@@ -76,6 +80,7 @@ export class MeasurementSpo2Component implements OnInit {
         }
       }
       else {
+        console.log("Else")
         if (divs[i]?.classList.contains('finalized')){
           divs[i]?.classList.remove('finalized');}
         else if (divs[i]?.classList.contains('connected')){

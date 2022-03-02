@@ -1,18 +1,18 @@
-<div fxFlex class="dark-style"
+<div fxFlex class="dark-style scale disconnected"
 fxLayout="column">
-<mat-card class="scale-format" style="background: rgb(0, 0, 0)"
+<mat-card class="scale-format scale disconnected"
     fxFill
     fxLayout="column"
     fxLayoutAlign="space-around stretch">
     
-    <div class = 'connection'
+    <div class = 'scale-format scale disconnected'
         fxFlex 
         fxLayout="column" 
         fxLayoutAlign="space-around stretch"
-        fxLayoutGap="5px" style="background: rgb(0, 0, 0)"
+        fxLayoutGap="5px"
         fxFill>
         <div fxFlex>
-            <mat-card-title class="dark-style">Scale</mat-card-title>
+            <mat-card-title class="dark-style scale disconnected">Scale</mat-card-title>
         </div>
         <div fxFlex>
             <div  
@@ -20,8 +20,8 @@ fxLayout="column">
                 fxLayoutAlign="space-around stretch"
                 fxFlex>
                 <div fxFlex="33" class="metric-name" >Weight</div>
-                <div fxFlex="33" class="metric-value">0</div>
-                <div fxFlex="33" class="metric-unit">Lb</div>
+                <div fxFlex="33" class="metric-value"*ngIf='deviceData'>{{this.deviceData.dataOne}}</div>
+                <div fxFlex="33" class="metric-unit">Lbs</div>
           </div>
         </div>
 
@@ -30,14 +30,14 @@ fxLayout="column">
                 fxLayout="row"   
                 fxLayoutAlign="space-around stretch"
                 fxFlex>
-            <div fxFlex="33" class="metric-name" >Body fat</div>
-            <div fxFlex="33" class="metric-value">0</div>
-            <div fxFlex="33" class="metric-unit">%</div>
+            <div fxFlex="33" class="metric-name" ></div>
+            <div fxFlex="33" class="metric-value">&nbsp;</div>
+            <div fxFlex="33" class="metric-unit"></div>
           </div>
         </div>
         <div fxFlex="8%">
             <mat-card-actions>
-                <p class="status-line">Disconnected...</p>
+                <p class="status-line"*ngIf='deviceData'>{{this.deviceData.status}}</p>
               </mat-card-actions>
         </div>
 

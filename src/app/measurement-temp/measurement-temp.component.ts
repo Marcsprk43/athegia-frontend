@@ -41,7 +41,7 @@ export class MeasurementTempComponent implements OnInit {
         console.log(this.deviceData);
         console.log("DataTwo: ", this.deviceData.dataTwo)
       });
-    interval(500).subscribe(() => {
+    interval(2000).subscribe(() => {
       this.dataService.getConfig().subscribe((data:any) => {
       this.deviceData = {
         deviceId: data[2].device_id,

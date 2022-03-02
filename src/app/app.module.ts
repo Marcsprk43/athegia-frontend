@@ -6,11 +6,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MeasurementSpo2Component } from './measurement-spo2/measurement-spo2.component';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { MeasurementBpComponent } from './measurement-bp/measurement-bp.component';
 import { MeasurementTempComponent } from './measurement-temp/measurement-temp.component';
 import { MeasurementScaleComponent } from './measurement-scale/measurement-scale.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DataComponent } from './data/data.component';
+import { DisplayComponent } from './display/display.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     MeasurementSpo2Component,
     MeasurementBpComponent,
     MeasurementTempComponent,
-    MeasurementScaleComponent
+    MeasurementScaleComponent,
+    DataComponent,
+    DisplayComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatCardModule,
     HttpClientModule,
+    AppRoutingModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,9 +7,8 @@ import { GetDataService } from './get-data.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'angular-test-frames';
-  constructor( private dataService: GetDataService) { }
   ngOnInit(): void {
-    this.dataService.start()
   }
+  title = 'angular-test-frames';
+
 }
