@@ -1,0 +1,52 @@
+<!-- Start by creating a column divider-->
+<div 
+fxFlex 
+fxLayout="column" 
+fxLayoutAlign="space-around stretch"
+fxLayoutGap="5px" style="background: rgb(49, 48, 48)"
+fxFill>
+  <!-- Creating the header-->
+  <div fxFlex='10%' class="page-heading">
+    <div fxFlex 
+    fxLayout="row"   
+    fxLayoutAlign="space-around stretch"
+    >        <div class="page-heading">Athegia Measurements</div>
+
+    </div>
+    <div fxFlex
+    fxLayout='row'
+    fxLayoutAlign = 'space-around stretch'>
+      <a routerLink = '/display'><button mat-raised-button color="primary" mat-button (click)="save_data()">Save Data</button></a>
+  </div>
+  </div>
+  <!-- Creating the first row-->
+  <div fxFlex="45%">
+    <div  fxFlex
+    fxLayout="row"   
+    fxLayoutAlign="space-around stretch"
+    >
+      <div fxFlex="50" style="background: blue; margin: 5px" >
+        <app-measurement-spo2></app-measurement-spo2>
+      </div>
+      <div fxFlex="50" style="background: yellow; margin: 5px">
+        <app-measurement-bp></app-measurement-bp>
+      </div>
+    </div>
+  </div>
+
+<div fxFlex="45%">
+  <div  fxLayout="row"  
+  fxLayoutAlign="space-around stretch"
+  fxFlex>
+
+    <div fxFlex="50" style="background: blue; margin: 5px" >
+      <app-measurement-temp></app-measurement-temp>
+    </div>
+    <div fxFlex="50" style="background: yellow; margin: 5px">
+      <app-measurement-scale></app-measurement-scale>
+    </div>
+  </div>
+</div>
+
+
+</div> 
