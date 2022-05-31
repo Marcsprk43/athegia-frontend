@@ -17,7 +17,7 @@ export class GetDataService {
 
 
   getConfig() {
-    this.configUrl = 'http://10.0.0.109:5000/get_data';
+    this.configUrl = 'http://0.0.0.0:5000/get_data';
     this.news = this.http.get(this.configUrl);
     return this.news;
 }
